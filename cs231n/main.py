@@ -3,7 +3,6 @@ import numpy as np
 import math
 import timeit
 import matplotlib.pyplot as plt
-# import simple_model
 from data_utils import load_CIFAR10
 
 def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=10000):

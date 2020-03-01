@@ -25,13 +25,3 @@ def simple_model(X, y):
     h1_flat = tf.reshape(h1, [-1, 5408])
     y_out = tf.matmul(h1_flat, W1) + b1
     return y_out
-
-y_out = simple_model(X, y)
-
-# define loss
-total_loss = tf.losses.hinge_loss(tf.one_hot(y, 10), logits=y_out)
-mean_loss = tf.reduce_mean(total_loss)
-
-# define optimizer
-optimizer = tf.train.AdamOptimizer(5e-4)
-train_step = optimizer.minimize(mean_loss)

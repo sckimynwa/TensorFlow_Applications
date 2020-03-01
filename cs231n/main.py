@@ -3,6 +3,7 @@ import numpy as np
 import math
 import timeit
 import matplotlib.pyplot as plt
+# import simple_model
 from data_utils import load_CIFAR10
 
 def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=10000):
@@ -43,3 +44,15 @@ print('Validation data shape: ', X_val.shape)
 print('Validation labels shape: ', y_val.shape)
 print('Test data shape: ', X_test.shape)
 print('Test labels shape: ', y_test.shape)
+print('Input Data Success!')
+print('------------------------------------------')
+
+# train simple model
+# y_out = simple_model(X_train, y_train)
+# print('loss = ', y_out)
+
+# total_loss = tf.losses.hinge_loss(tf.one_hot(y, 10), logits=y_out)
+# mean_loss = tf.reduce_mean(total_loss)
+# optimizer = tf.train.AdamOptimizer(5e-4)
+# train_step = optimizer.minimize(mean_loss)
+
